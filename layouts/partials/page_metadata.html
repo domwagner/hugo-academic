@@ -29,7 +29,6 @@
   <span class="middot-divider"></span>
   {{ end }}
 
-  {{ if not (in (slice "talk" "page") $page.Type) }}
   <span class="article-date">
     {{ $date := $page.Lastmod.Format site.Params.date_format }}
     {{ if eq $page.Type "publication" }}
@@ -41,8 +40,7 @@
     {{ end }}
     <time>{{ $date }}</time>
   </span>
-  {{ end }}
-
+  
 
   {{ if and (eq $page.Type "post") (not (or (eq site.Params.reading_time false) (eq $page.Params.reading_time false))) }}
   <span class="middot-divider"></span>
