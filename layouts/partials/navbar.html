@@ -6,6 +6,7 @@
       <a class="navbar-brand" href="{{ "/" | relLangURL }}">
         {{- if site.Params.logo -}}
         <img src="{{ printf "/img/%s" site.Params.logo | relURL }}" alt="{{ site.Title }}">
+        {{- site.Title -}}
         {{- else -}}
         {{- site.Title -}}
         {{- end -}}
