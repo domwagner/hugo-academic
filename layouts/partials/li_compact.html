@@ -52,18 +52,6 @@
 
     <div class="stream-meta article-metadata">
 
-      {{ if eq $item.Type "talk" }}
-      <div>
-        <span itemprop="startDate">
-          {{ partial "functions/get_event_dates" $item }}
-        </span>
-        {{ with $item.Params.location }}
-        <span class="middot-divider"></span>
-        <span itemprop="location">{{ . }}</span>
-        {{ end }}
-      </div>
-      {{ end }}
-
       {{ if and $show_authors_only $item.Params.authors }}
       <div itemprop="author">
         {{ partial "page_metadata_authors" $item }}
