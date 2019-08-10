@@ -339,19 +339,20 @@ a[data-fancybox] {
  **************************************************/
 
 footer {
-  margin: 4rem 0 0;
+  margin: 0rem 0 0;
   padding: 2rem 0;
   width: 100%;
 }
 
 footer p {
+  color: #B2BBC4;
   font-size: 0.75rem;
   text-align: center;
 }
 
 site-footer,
 footer a#back_to_top i {
-  color: rgba(0,0,0,0.54);
+    color: #B2BBC4;
 }
 
 .dark site-footer,
