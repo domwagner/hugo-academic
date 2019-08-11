@@ -11,19 +11,22 @@
   {{ if $page.Params.authors }}
   {{ $authorLen := len $page.Params.authors }}
   {{ if gt $authorLen 0 }}
-  <div>
-    {{ partial "page_metadata_authors" $page }}
-  </div>
+  
+  {{ partial "page_metadata_authors" $page }}
+  <span class="middot-divider"></span>
+  
   {{ end }}
   {{ end }}
 
 
   <span class="pub-publication">
-    {{ if $page.Params.publication_short }}
-      {{ $page.Params.publication_short | markdownify }}
-    {{ else if $page.Params.publication }}
-      {{ $page.Params.publication | markdownify }}
-    {{ end }}
+  {{ if $page.Params.publication }}
+    {{ $page.Params.publication | markdownify }}
+  {{ end }}
+  {{ if $page.Params.publication_short }}
+    ({{ $page.Params.publication_short | markdownify }})
+  {{ end }}
+  
   </span>
   <span class="middot-divider"></span>
 
